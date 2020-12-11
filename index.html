@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>学习强国自动化</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="hudd">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/font/fontello.css" type="text/css" media="screen" />
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link href="css/media-queries.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+    <meta name="baidu-tc-verification" content="319666f336486184426d9cc320af5700" />
+    <style type="text/css">
+        .zhezhao {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            /*opacity: 0.5;*/
+            background: rgba(0,0,0,0.5)
+        }
+
+        .tankuang {
+            position: relative;
+            background: #fff;
+            width: 50%;
+            height: 80%;
+            border-radius: 5px;
+            margin: 5% auto;
+        }
+
+        #header {
+            height: 40px;
+        }
+
+        #header-right {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: red;
+            color: #fff;
+            right: 5px;
+            top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <div class="top-border"></div>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span3"><a href="#"><img src="img/logo.png" alt="image alt text here" style="margin:20px 0px 20px 0px;" /></a></div>
+                <div class="span9">
+                    <ul class="main-menu">
+                        <li><a href="#" class="current">主页</a></li>
+                        <li><a href="#services">软件特性</a></li>
+                        <li><a href="#blog">更新日志</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="slider">
+        <div class="container">
+            <div id="mainSlider" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="slide1 nBg">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h2 class="titleone">学习强国自动化1.2.0　</h2>
+                                    <p>强国自动化为解放双手而诞生，它的所有操作都是模拟人工进行操作，不用担心被检测，请放心使用</p>
+                                    <a class="big-grn-btn" href="https://jxsfgz.coding.net/api/share/download/ac860540-f965-4702-a173-0dcdb8b23d2e">立即下载 1.2.0</a>
+                                </div>
+                                <div class="span6"><img src="img/big-slider/slide1.png" alt="image alt text" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 各版本切换滚动按钮-->
+                <!--<a class="carousel-control left" href="#mainSlider" data-slide="prev">&lsaquo;</a><a class="carousel-control right" href="#mainSlider" data-slide="next">&rsaquo;</a>
+                <ol class="carousel-indicators">
+                  <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                  <li data-target="#mainSlider" data-slide-to="1"></li>
+                  <li data-target="#mainSlider" data-slide-to="2"></li>
+                  <li data-target="#mainSlider" data-slide-to="3"></li>
+                </ol>-->
+            </div>
+        </div>
+        <!--<div class="slider-pag-bg"></div>-->
+    </section>
+    <section id="services" class="intro">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h1>在您使用该软件之前，请查看<button type="button" onclick="dianwo()">配置方法</button></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span3 service-container">
+                    <div class="service">
+                        <div class="service-front">
+                            <div class="service-responsive"></div>
+                            <h2>模拟操作</h2>
+                        </div>
+                        <div class="service-back">
+                            <p>毫无疑问，您想要的是一款安全的软件，我们完全能够满足您的需求，该软件纯模拟人工操作，基本上无安全风险。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 service-container">
+                    <div class="service">
+                        <div class="service-front">
+                            <div class="service-social"></div>
+                            <h2>自动答题</h2>
+                        </div>
+                        <div class="service-back">
+                            <p>如果该软件没有自动答题功能，那该软件就显得很鸡肋。我们支持每日、每周、专项三项答题，真正解放了双手。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 service-container">
+                    <div class="service">
+                        <div class="service-front">
+                            <div class="service-clock"></div>
+                            <h2>类别选择</h2>
+                        </div>
+                        <div class="service-back">
+                            <p>当您运行程序时，不用担心中途发生错误，我们支持自由选择类别，避免了中途错误所造成的一系列问题。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 service-container" style="border:none;">
+                    <div class="service">
+                        <div class="service-front">
+                            <div class="service-management"></div>
+                            <h2>操作简单</h2>
+                        </div>
+                        <div class="service-back">
+                            <p>毫无疑问，您想要的是一款简单的软件，我们完全能够满足您的需求，您只需根据配置方法进行简单的配置之后便可以使用了，以后更新都无需重新配置。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog">
+        <div class="container">
+            <h3 class="subpage-title"><span>更新日志</span></h3>
+            <div class="row-fluid">
+                <div class="span12">
+                    <ul class="blog-posts">
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="blog-post">
+                                        <h2 class="black"><span>更新1.2.0</span></h2>
+                                        <p>新增类别选择功能，修复部分已知BUG.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="blog-post">
+                                        <h2 class="black">更新1.1.8</h2>
+                                        <p>解决需要在10秒内登陆的问题，取消启动后的弹窗，修复部分已知BUG.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="blog-post">
+                                        <h2 class="black">更新1.1.7</h2>
+                                        <p>支持选择运行结束后自动关机功能，修复部分已知BUG.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div class="blog-post">
+                                        <h2 class="black">更新1.1.6 ~ 更早</h2>
+                                        <p>制作成软件，整合部分配置，无需用户手动配置.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="zhezhao" id='zhezhao'>
+        <div class="tankuang">
+            <div id="header">
+                <center>
+                    <h2>配置方法</h2>
+                    <h3>安装<a href="http://www.firefox.com.cn/" target="_blank">Firefox（火狐）浏览器</a></h3>
+                    <span>本项目的核心是火狐浏览器，对强国的一切操作都通过火狐浏览器</span>
+                    <h3>下载<a href="https://jxsfgz.coding.net/api/share/download/dd68b248-527c-4097-8d33-4bc47d4156cf" target="_blank">geckodriver.exe</a></h3>
+                    <span>下载<a href="https://jxsfgz.coding.net/api/share/download/dd68b248-527c-4097-8d33-4bc47d4156cf" target="_blank">geckodriver.exe</a>并将其放入火狐浏览器安装目录，接下来将该目录添加到<a href="https://blog.csdn.net/qq_41661800/article/details/94382792" target="_blank">Path环境变量</a></span>
+                    <br /><br /><br />
+                    <span>下载该软件并安装</span>
+                    <span>完成后重启计算机便可，接下来运行该应用程序就可以啦</span>
+                </center>
+                <div id="header-right" onclick="hidder()">x</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('zhezhao').style.display = "none";
+        function dianwo() {
+            document.getElementById('zhezhao').style.display = "";
+        }
+        function hidder() {
+            document.getElementById('zhezhao').style.display = "none";
+        }
+    </script>
+
+    <script>function get() { htmlobj = $.ajax({ url: "/M.asp?mail=" + $("#mail").val() + "&name=" + $("#name").val() + "&nr=" + $("#message").val(), async: false }); if (htmlobj.responseText == "1") { alert("提交成功!"); } }</script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/easing.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
+    <script src="js/responsiveslides.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll/smooth-scroll.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery-func.js"></script>
+
+</body>
+</html>
